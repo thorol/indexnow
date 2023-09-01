@@ -2,6 +2,8 @@
 #
 $addon = rex_addon::get('indexnow');
 
+bing::generateAuthFile($addon->getConfig('apikey'));
+
 $form = rex_config_form::factory($addon->name);
 
 $field = $form->addInputField('text', 'apikey', null, ["class" => "form-control"]);
